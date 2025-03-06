@@ -1,0 +1,34 @@
+[
+  {
+    "id": "101",
+    "name": "Vintage Typewriter",
+    "category": "Antique",
+    "history": "Used by famous writers in the 1920s.",
+    "pricePerDay": 15.50,
+    "available": true
+  },
+  {
+    "id": "102",
+    "name": "Classic 1967 Mustang",
+    "category": "Vintage Car",
+    "history": "A legendary muscle car featured in multiple films.",
+    "pricePerDay": 250.00,
+    "available": true
+  },
+  {
+    "id": "103",
+    "name": "Medieval Knight Armor",
+    "category": "Historical Artifact",
+    "history": "Authentic armor from the 15th century.",
+    "pricePerDay": 120.00,
+    "available": true
+  },
+  {
+    "id": "104",
+    "name": "Gibson Les Paul Guitar",
+    "category": "Musical Instrument",
+    "history": "Played in a legendary rock concert.",
+    "pricePerDay": 75.00,
+    "available": true
+  }
+]

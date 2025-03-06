@@ -1,0 +1,40 @@
+type Query {
+    user(id: ID!): User
+    items: [Item!]!
+}
+
+type Mutation {
+    rentItem(input: RentalInput!): Rental
+    returnItem(rentalId: ID!): Boolean
+}
+
+type User {
+    id: ID!
+    name: String!
+    email: String!
+    rentals: [Rental!]
+}
+
+type Item {
+    id: ID!
+    name: String!
+    category: String!
+    history: String
+    pricePerDay: Float!
+    available: Boolean!
+}
+
+type Rental {
+    id: ID!
+    user: User!
+    item: Item!
+    days: Int!
+    totalPrice: Float!
+    rentalDate: String!
+}
+
+input RentalInput {
+    userId: ID!
+    itemId: ID!
+    days: Int!
+}

@@ -1,0 +1,26 @@
+{
+    user(id: "2") {
+        id
+        name
+        email
+        rentals {
+            id
+            item {
+                id
+                name
+                category
+                pricePerDay
+            }
+            days
+            totalPrice
+            rentalDate
+        }
+    }
+    items {
+        id
+        name
+        category
+        pricePerDay
+        available
+    }
+}
