@@ -15,12 +15,14 @@ import java.nio.file.Paths;
 public class Main {
 
     private static final String SCHEMA_PATH = "src/main/resources/graphql/schema/rental.graphqls";
-    private static final String QUERY_PATH  = "/graphql/query/rental/sample_query.graphql";
+    private static final String QUERY_PATH  = "/graphql/query/rental/rent_item.graphql";
+    private static final String LIST_ITEMS_PATH  = "/graphql/query/rental/sample_query.graphql";
 
     public static void main(String[] args) {
         GraphQL graphQL = setupGraphQL();
         System.out.println("GraphQL server is running!");
-        executeSampleQuery(graphQL);
+        //executeSampleQuery(graphQL);
+        executeListItems(graphQL);
     }
 
     private static GraphQL setupGraphQL() {
@@ -53,6 +55,12 @@ public class Main {
 
     private static void executeSampleQuery(GraphQL graphQL) {
         String query = FileUtils.readFileContent(QUERY_PATH);
+        ExecutionResult executionResult = graphQL.execute(query);
+        System.out.println(JsonUtils.serializeToJson(executionResult.toSpecification()));
+    }
+
+    private static void executeListItems(GraphQL graphQL) {
+        String query = FileUtils.readFileContent(LIST_ITEMS_PATH);
         ExecutionResult executionResult = graphQL.execute(query);
         System.out.println(JsonUtils.serializeToJson(executionResult.toSpecification()));
     }

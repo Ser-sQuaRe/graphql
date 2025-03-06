@@ -1,0 +1,17 @@
+mutation{
+    rentItem(input: { userId: "2", itemId: "102", days: 5 }) {
+        id
+        user {
+            id
+            name
+        }
+        item {
+            id
+            name
+            category
+        }
+        days
+        totalPrice
+        rentalDate
+    }
+}

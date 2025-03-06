@@ -12,6 +12,10 @@ import java.util.Map;
 
 public class Mutations {
 
+    //private static final String USERS_DATA_PATH = "/data/users.json";
+    //private static final String ITEMS_DATA_PATH = "/data/items.json";
+
+
     private static final List<User> users = JsonUtils.loadListFromJsonFile("/data/users.json", User[].class);
     private static final List<Item> items = JsonUtils.loadListFromJsonFile("/data/items.json", Item[].class);
 
